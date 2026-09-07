@@ -152,11 +152,6 @@ Results are saved to:
 ./outputs/{exp_name}/{model_type}_sb{spectral_boost}_mask{use_mask}/
 ```
 
-Timing data is saved to:
-```
-./outputs/timing/{exp_name}/{model_type}/processing_times.csv
-```
-
 ## Citation
 
 If you find this work useful, please cite:

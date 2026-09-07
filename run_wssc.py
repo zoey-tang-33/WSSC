@@ -6,8 +6,6 @@ import random
 import numpy as np
 import yaml
 import os
-import time
-import csv
 
 from wssc import WSSC
 
@@ -68,16 +66,6 @@ if __name__ == "__main__":
         with open(dataset_yaml) as file:
             dataset_configs = yaml.load(file, Loader=yaml.FullLoader)
 
-        processing_times = []
-        csv_dir = f"./outputs/timing/{exp_name}/{model_type}"
-        csv_file_path = f"{csv_dir}/processing_times.csv"
-        os.makedirs(csv_dir, exist_ok=True)
-
-        with open(csv_file_path, 'w', newline='') as csvfile:
-            csv_writer = csv.writer(csvfile)
-            csv_writer.writerow(['Image Path', 'Source Prompt',
-                                 'Target Prompt', 'Processing Time (seconds)'])
-
         for data_dict in dataset_configs:
 
             src_prompt = data_dict["source_prompt"]
@@ -103,7 +91,6 @@ if __name__ == "__main__":
 
             for tar_num, tar_prompt in enumerate(tar_prompts):
 
-                start_time = time.time()
                 x0_tar = WSSC(
                     pipe=pipe,
                     scheduler=scheduler,
@@ -123,7 +110,6 @@ if __name__ == "__main__":
                     n_levels=n_levels,
                 )
 
-                end_time = time.time()
                 x0_tar_denorm = ((x0_tar / pipe.vae.config.scaling_factor)
                                  + pipe.vae.config.shift_factor)
                 with torch.autocast("cuda"), torch.inference_mode():
@@ -156,13 +142,5 @@ if __name__ == "__main__":
                     f.write(f"Target prompt: {tar_prompt}\n")
                     f.write(f"Seed: {seed}\n")
                     f.write(f"Sampler type: {model_type}\n")
-
-                processing_time = end_time - start_time
-                processing_times.append(processing_time)
-
-                with open(csv_file_path, 'a', newline='') as csvfile:
-                    csv_writer = csv.writer(csvfile)
-                    csv_writer.writerow([output_path, src_prompt,
-                                         tar_prompt, processing_time])
 
     print("Done")
