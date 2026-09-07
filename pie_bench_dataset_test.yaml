@@ -1,0 +1,35 @@
+- input_img: ./data/PIE-Bench/annotation_images/0_random_140/000000000000.jpg
+  source_prompt: a slanted mountain bicycle on the road in front of a building
+  target_prompts:
+  - a slanted rusty mountain bicycle on the road in front of a building
+  target_codes:
+  - edit_000000000000
+  mask_path: ./data/mask/0_random_140/000000000000.png
+- input_img: ./data/PIE-Bench/annotation_images/0_random_140/000000000001.jpg
+  source_prompt: a round cake with orange frosting on a wooden plate
+  target_prompts:
+  - a square cake with orange frosting on a wooden plate
+  target_codes:
+  - edit_000000000001
+  mask_path: ./data/mask/0_random_140/000000000001.png
+- input_img: ./data/PIE-Bench/annotation_images/0_random_140/000000000002.jpg
+  source_prompt: a cat sitting on a wooden chair
+  target_prompts:
+  - a dog sitting on a wooden chair
+  target_codes:
+  - edit_000000000002
+  mask_path: ./data/mask/0_random_140/000000000002.png
+- input_img: ./data/PIE-Bench/annotation_images/0_random_140/000000000003.jpg
+  source_prompt: blue light, a black and white cat is playing with a flower
+  target_prompts:
+  - blue light, a black and white dog is playing with a flower
+  target_codes:
+  - edit_000000000003
+  mask_path: ./data/mask/0_random_140/000000000003.png
+- input_img: ./data/PIE-Bench/annotation_images/0_random_140/000000000004.jpg
+  source_prompt: a cat sitting next to a mirror
+  target_prompts:
+  - a silver cat sculpture sitting next to a mirror
+  target_codes:
+  - edit_000000000004
+  mask_path: ./data/mask/0_random_140/000000000004.png

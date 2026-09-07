@@ -1,0 +1,14 @@
+- exp_name: "WSSC_FLUX_CFG35_N3_K3"
+  dataset_yaml: ./pie_bench_dataset_test.yaml
+  model_type: "FLUX"
+  sampler_type: "WSSC"
+  T_steps: 28
+  n_avg: 1
+  src_guidance_scale: 3.5
+  tar_guidance_scale: 5.5
+  n_min: 0
+  n_max: 24
+  seed: 10
+  spectral_boost: 3.0
+  use_mask: true
+  n_levels: 3

@@ -1,0 +1,26 @@
+# Data and models (downloaded separately — keep dir structure via .gitkeep)
+data/*
+!data/.gitkeep
+models/*
+!models/.gitkeep
+
+# Generated outputs
+outputs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
