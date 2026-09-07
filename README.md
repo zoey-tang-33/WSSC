@@ -157,11 +157,11 @@ Results are saved to:
 If you find this work useful, please cite:
 
 ```bibtex
-@article{tang2025wssc,
-  title={Wavelet-Guided Semantic Signal Compensation for Inversion-Free Image Editing},
-  author={Tang, Anqi and Sun, Wenhao and Liu, Zhaoqiang},
-  journal={[Journal/Conference TBD]},
-  year={2025}
+@inproceedings{tang2026wavelet,
+  title     = {Wavelet-Guided Semantic Signal Compensation for Inversion-Free Image Editing},
+  author    = {Tang, Anqi and Sun, Wenhao and Liu, Zhaoqiang},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  year      = {2026}
 }
 ```
 
